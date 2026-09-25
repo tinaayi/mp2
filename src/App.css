@@ -1,0 +1,326 @@
+.app {
+  min-height: 100vh;
+  padding: 36px 48px;
+  background-color: #fbead4;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 24px;
+  border-bottom: 3px solid #e9ddcf;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #cb6f49;
+  font-weight: 900;
+}
+
+.brand span {
+  color: #cb6f49;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.navButton {
+  border: none;
+  background-color: transparent;
+  color: #cb6f49;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.navButton:hover {
+  transform: translateY(-2px);
+  background-color: white;
+}
+
+.navButton.active {
+  background-color: #cb6f49;
+  color: white;
+}
+
+/* ListPage control*/
+.listControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin: 24px 0px;
+}
+
+.listControls input {
+  width: 260px;
+  border: 3px solid #e9ddcf;
+  font-size: 18px;
+  outline: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: #3d3028;
+}
+
+.listControls input:focus {
+  border-color: #cb6f49;
+}
+
+.listControls select {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: #3d3028;
+  border: 3px solid #e9ddcf;
+}
+
+.listControls select:focus {
+  border-color: #cb6f49;
+}
+
+.sortOrderButtons {
+  display: flex;
+  gap:12px;
+}
+
+.sortButton {
+  font-size: 18px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: #3d3028;
+  border: none;
+  background-color: transparent;
+  color: #cb6f49;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.sortButton:hover {
+  transform: translateY(-2px);
+  background-color: white;
+}
+
+.sortButton.active {
+  background-color: #cb6f49;
+  color: white;
+}
+
+/* ListPage item */
+.message {
+  display: flex;
+  justify-content: center;
+}
+
+.mealListLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mealListItem {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background-color: white;
+  border: 3px solid #e9ddcf;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.mealListItem:hover {
+  transform: translateY(-2px);
+  border-color: #cb6f49;
+}
+
+.mealListItem img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.mealListItem h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.mealListItem p {
+  margin: 5px 0;
+  color: #76665c;
+}
+
+/* DetailPage back&content */
+.backButton {
+  border: none;
+  background-color: #cb6f49;
+  font-size: 18px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.detailContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px;
+  max-width: 1100px;
+  margin: 24px auto;
+}
+
+.detailImage {
+  width: 45%;
+  max-width: 480px;
+  border-radius: 10px;
+}
+
+.detailInfo {
+  flex: 1;
+  font-size: 18px;
+  color: #3d3028;
+}
+
+.detailInfo h1 {
+  color: #cb6f49;
+  font-size: 36px;
+  margin-top: 0;
+}
+
+.detailInfo h2 {
+  margin-top: 24px;
+  color: #cb6f49;
+}
+
+.ingredientList {
+  line-height: 1.5;
+  padding: 0;
+  color: #3d3028;
+}
+
+.ingredientList li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid #e9ddcf;
+}
+
+.ingredientList li span:last-child {
+  color: #76665c;
+}
+
+.instructions {
+  line-height: 1.5;
+  color: #3d3028;
+}
+
+/* DetailPage previous&next */
+.detailNavigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.detailNavigation button {
+  border: none;
+  background-color: #cb6f49;
+  font-size: 18px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.detailNavigation button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* GalleryPage category */
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(160px, 1fr)
+  );
+  gap: 6px;
+  margin: 24px 0;
+}
+
+.categoryButton {
+  font-size: 18px;
+  border-radius: 10px;
+  background-color: transparent;
+  color: #cb6f49;
+  border: none;
+  font-weight: bold;
+  padding: 10px 18px;
+  cursor: pointer;
+}
+
+.categoryButton:hover {
+  background-color: white;
+  transform: translateY(-2px);
+}
+
+.categoryButton.active {
+  color: white;
+  background-color: #cb6f49;
+}
+
+/* GalleryPage List */
+.mealGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(180px, 1fr)
+  );
+  gap: 24px;
+}
+
+.mealCardLink {
+  color: inherit;
+  text-decoration: none;
+}
+
+.mealCard {
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+  border: 3px solid #e9ddcf;
+  border-radius: 12px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.mealCard:hover {
+  transform: translateY(-3px);
+  border-color: #cb6f49;
+}
+
+.mealCard img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mealCard h2 {
+  margin: 0;
+  padding: 16px;
+  font-size: 18px;
+}
