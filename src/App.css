@@ -63,6 +63,7 @@
   align-items: center;
   gap: 24px;
   margin: 24px 0px;
+  flex-wrap: wrap;
 }
 
 .listControls input {
@@ -254,12 +255,9 @@
 
 /* GalleryPage category */
 .categoryGrid {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(160px, 1fr)
-  );
-  gap: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   margin: 24px 0;
 }
 
@@ -315,6 +313,7 @@
 
 .mealCard img {
   width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
 }
